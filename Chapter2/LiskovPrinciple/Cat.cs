@@ -1,6 +1,6 @@
 ﻿namespace LiskovPrinciple
 {
-    class Cat : IAnimal
+    internal class Cat : IAnimal
     {
         public string MakeNoise()
         {

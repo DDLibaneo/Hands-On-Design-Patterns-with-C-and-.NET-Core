@@ -7,7 +7,11 @@ namespace LiskovPrinciple
     {
         static void Main(string[] args)
         {
-            var animals = new List<IAnimal> { new Cat(), new Dog() };
+            var animals = new List<IAnimal>() 
+            { 
+                new Cat(), 
+                new Dog() 
+            };
 
             foreach (var animal in animals)
             {

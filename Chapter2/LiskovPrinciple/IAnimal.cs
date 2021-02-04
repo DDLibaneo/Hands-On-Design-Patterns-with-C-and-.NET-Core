@@ -1,6 +1,6 @@
 ﻿namespace LiskovPrinciple
 {
-    interface IAnimal
+    internal interface IAnimal
     {
         string MakeNoise();
     }
