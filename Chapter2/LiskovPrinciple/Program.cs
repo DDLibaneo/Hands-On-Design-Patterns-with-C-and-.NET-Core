@@ -17,23 +17,4 @@ namespace LiskovPrinciple
             Console.Read();
         }
     }
-
-    interface IAnimal
-    {
-        string MakeNoise();
-    }
-    class Dog : IAnimal
-    {
-        public string MakeNoise()
-        {
-            return "Woof";
-        }
-    }
-    class Cat : IAnimal
-    {
-        public string MakeNoise()
-        {
-            return "Meouw";
-        }
-    }
 }
