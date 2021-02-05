@@ -13,5 +13,4 @@ namespace DecoratorPattern
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
-
 }

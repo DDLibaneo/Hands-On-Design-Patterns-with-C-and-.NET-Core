@@ -6,7 +6,6 @@ namespace DecoratorPattern
     {
         public NormalDecorator(Message message) : base(message) { }
 
-
         public override void PrintMessage()
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -14,5 +13,4 @@ namespace DecoratorPattern
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
-
 }
