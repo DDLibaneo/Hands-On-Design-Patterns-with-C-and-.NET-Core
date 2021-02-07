@@ -4,6 +4,7 @@ namespace BehavioralPattern
 {
     internal class Program
     {
+        // Este é um exemplo de Chain of Responsibility
         static void Main(string[] args)
         {
             var mechanic = new Mechanic();
