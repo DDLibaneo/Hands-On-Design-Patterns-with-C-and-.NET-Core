@@ -7,22 +7,28 @@ namespace BehavioralPattern
         static void Main(string[] args)
         {
             var mechanic = new Mechanic();
-            var detailer = new Detailer();
             var wheels = new WheelSpecialist();
             var qa = new QualityControl();
+            var detailer = new Detailer();            
 
-            qa.SetNextServiceHandler(detailer);
-            wheels.SetNextServiceHandler(qa);
             mechanic.SetNextServiceHandler(wheels);
+            wheels.SetNextServiceHandler(qa);
+            qa.SetNextServiceHandler(detailer);
 
             Console.WriteLine("Car 1 is dirty");
-            mechanic.Service(new Car { Requirements = ServiceRequirements.Dirty });
+
+            var car1 = new Car()
+            {
+                Requirements = ServiceRequirements.Dirty
+            };
+
+            mechanic.Service(car1);
 
             Console.WriteLine();
 
             Console.WriteLine("Car 2 requires full service");
 
-            var car = new Car()
+            var car2 = new Car()
             {
                 Requirements = ServiceRequirements.Dirty |
                     ServiceRequirements.EngineTune |
@@ -30,7 +36,7 @@ namespace BehavioralPattern
                     ServiceRequirements.WheelAlignment
             };
 
-            mechanic.Service(car);
+            mechanic.Service(car2);
 
             Console.Read();
         }
