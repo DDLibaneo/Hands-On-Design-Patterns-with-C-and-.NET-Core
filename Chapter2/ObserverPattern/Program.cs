@@ -25,37 +25,9 @@ namespace ObserverPattern
         }
     }
 
+    // "The delegate keyword defines the format or handler that will be called."
+    // The delegate to be used when the quantity is updated is shown in the following code:
     public delegate void QuantityUpdated(int quantity);
-
-    class Subject
-    {
-        private int _quantity = 0;
-        
-        public event QuantityUpdated OnQuantityUpdated;
-
-        public void UpdateQuantity(int value)
-        {
-            _quantity += value;
-
-            // alert any observers
-            OnQuantityUpdated?.Invoke(_quantity);
-
-        }
-    }
-
-    class Observer
-    {
-        ConsoleColor _color;
-        public Observer(ConsoleColor color)
-        {
-            _color = color;
-        }
-
-        internal void ObserverQuantity(int quantity)
-        {
-            Console.ForegroundColor = _color;
-            Console.WriteLine($"I observer the new quantity value of {quantity}.");
-            Console.ForegroundColor = ConsoleColor.White;
-        }
-    }
+    // The delegate defines QuantityUpdated to be a method that receives an integer and 
+    // does not return any value.
 }
