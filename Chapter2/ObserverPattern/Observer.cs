@@ -4,7 +4,8 @@ namespace ObserverPattern
 {
     internal class Observer
     {
-        ConsoleColor _color;
+        readonly ConsoleColor _color;
+
         public Observer(ConsoleColor color)
         {
             _color = color;
