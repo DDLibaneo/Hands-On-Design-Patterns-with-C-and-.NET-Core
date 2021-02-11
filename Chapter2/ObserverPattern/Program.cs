@@ -13,12 +13,12 @@ namespace ObserverPattern
             var redObserver = new Observer(ConsoleColor.Red);
             var yellowObserver = new Observer(ConsoleColor.Yellow);
 
-            subject.OnQuantityUpdated += greenObserver.ObserverQuantity;
-            subject.OnQuantityUpdated += redObserver.ObserverQuantity;
-            subject.OnQuantityUpdated += yellowObserver.ObserverQuantity;
+            subject.QuantityUpdated += greenObserver.OnUpdateQuantity;
+            subject.QuantityUpdated += redObserver.OnUpdateQuantity;
+            subject.QuantityUpdated += yellowObserver.OnUpdateQuantity;
 
-            subject.UpdateQuantity(12);
-            subject.UpdateQuantity(5);
+            subject.AddToQuantity(12);
+            subject.AddToQuantity(5);
 
             Console.WriteLine("Enter a key to quit.");
             Console.Read();

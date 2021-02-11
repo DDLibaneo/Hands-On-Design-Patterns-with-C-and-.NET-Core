@@ -11,10 +11,10 @@ namespace ObserverPattern
             _color = color;
         }
 
-        internal void ObserverQuantity(int quantity)
+        internal void OnUpdateQuantity(int quantity)
         {
             Console.ForegroundColor = _color;
-            Console.WriteLine($"I observer the new quantity value of {quantity}.");
+            Console.WriteLine($"I observe the new quantity value of {quantity}.");
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
