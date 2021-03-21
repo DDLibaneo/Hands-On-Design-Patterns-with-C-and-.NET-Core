@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecoratorPattern", "Decorat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BehavioralPattern", "BehavioralPattern\BehavioralPattern.csproj", "{4713A41E-D961-42DD-B9EC-C9E2670C66DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPattern", "ObserverPattern\ObserverPattern.csproj", "{AE819CB1-0CF1-4ADD-96E7-CAA6DBFAC22F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverPattern", "ObserverPattern\ObserverPattern.csproj", "{AE819CB1-0CF1-4ADD-96E7-CAA6DBFAC22F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
